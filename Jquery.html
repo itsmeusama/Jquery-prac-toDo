@@ -1,0 +1,23 @@
+<html>
+    <head>  
+        <title>Todo Demo</title>
+    </head>
+    <body>
+        <input type="text" id="todoText" placeholder="Type Here.."/>
+        <button id="todoAdd">Add</button>
+        <ul id="todoList"></ul>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#todoAdd').on('click', function () {
+                    var todoText = $('#todoText').val();
+                    $('#todoList').append('<li>' + todoText + '<button class = "todoRemove">X</button></li>')
+                });
+
+                $(docuement).on('click','todoRemove', function() {
+                    $(this).parent().remove();
+                });
+            });
+        </script>
+    </body>
+</html>
