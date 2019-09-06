@@ -14,8 +14,8 @@
                     $('#todoList').append('<li>' + todoText + '<button class = "todoRemove">X</button></li>')
                 });
 
-                $(docuement).on('click','todoRemove', function() {
-                    $(this).parent().remove();
+                $(document).on('click','.todoRemove', function() {
+                    $(this).parent().fadeOut(200);
                 });
             });
         </script>
